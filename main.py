@@ -9,7 +9,7 @@ from pydantic import BaseModel
 from PIL import Image
 
 from io import BytesIO
-from tensorflow.keras.utils import load_img, img_to_array
+import keras.utils as image
 from fastapi import FastAPI, File, UploadFile
 
 app = FastAPI(title="Freshcan Classifier API")
@@ -27,8 +27,9 @@ def predict(gambar):
     loaded_model = tf.keras.models.load_model('model.h5')
 
     # Preprocess
+    gambar = gambar.convert("RGB")
     gambar = gambar.resize((150, 150))
-    gambar = img_to_array(gambar)
+    gambar = image.img_to_array(gambar)
     
 
     gambar = np.expand_dims(gambar, 0)
