@@ -2,6 +2,8 @@ FROM python:3.10.3-slim-buster
 
 WORKDIR /app
 
+RUN apt-get update 
+
 RUN apt-get install -y wget 
 
 RUN wget https://storage.googleapis.com/freshcancoba1/model/model.h5
