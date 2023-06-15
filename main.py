@@ -45,32 +45,47 @@ def predict(gambar):
 
     chosen_class = pick_fruits_or_vegetables(label)
     final_res = chosen_class + " " + str(precentage) + "%"
-
+    # print(label)
     return final_res
 
 def pick_fruits_or_vegetables(label):
-    # 20 remaining labels will be added after optimizing the model
-    # There will be some changes for the label
+    # Final Labels
     if label == 0:
-        return "Rotten Banana"
+        return "Fresh Tomato"
     elif label == 1:
-        return "Fresh Cucumber"
+        return "Rotten Tomato"
     elif label == 2:
-        return "Rotten Cucumber"
+        return "Rotten Banana"
     elif label == 3:
-        return "Rotten Tomato"
+        return "Rotten Carrot"
     elif label == 4:
-        return "Fresh Orange"
+        return "Fresh Carrot"
     elif label == 5:
-        return "Rotten Tomato"
+        return "Rotten Cucumber"
     elif label == 6:
-        return "Rotten Apple"
+        return "Fresh Mango"
     elif label == 7:
-        return "Rotten Orange"
+        return "Rotten Mango"
     elif label == 8:
+        return "Rotten Capsicum"
+    elif label == 9:
+        return "Fresh Capsicum"
+    elif label == 10:
         return "Fresh Banana"
-    else:
+    elif label == 11:
+        return "Rotten Apple"
+    elif label == 12:
+        return "Fresh Strawberry"
+    elif label == 13:
+        return "Rotten Strawberry"
+    elif label == 14:
+        return "Rotten Orange"
+    elif label == 15:
+        return "Fresh Cucumber"
+    elif label == 16:
         return "Fresh Apple"
+    else:
+        return "Fresh Orange"
 
 @app.post("/predict/image")
 async def predict_api(file: UploadFile = File(...)):
