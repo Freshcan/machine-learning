@@ -6,7 +6,7 @@ RUN apt-get update
 
 RUN apt-get install -y wget 
 
-RUN wget https://storage.googleapis.com/freshcancoba1/model/model.h5
+RUN wget https://storage.googleapis.com/freshcan-bucket/model/model.h5
 
 COPY requirements.txt requirements.txt
 
