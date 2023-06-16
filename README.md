@@ -7,7 +7,7 @@ We have built an image classification model to detect fruit or vegetable freshne
 ## Datasets
 There are 2 datasets from kaggle that we use. Here are the links for those datasets.
 -   https://www.kaggle.com/datasets/sriramr/fruits-fresh-and-rotten-for-classification
--   https://www.kaggle.com/datasets/raghavrpotdar/fresh-and-stale-images-of-fruits-and-vegetables
+-   https://www.kaggle.com/datasets/raghavrpotdar/fresh-and-stale-images-of-fruits-and-vegetables <br />
 We pick 9 types of fruits and vegetables which consist of apple, banana, orange, tomato, cucumber, carrot, mango, strawberry, and capsicum. Each fruit and vegetable will be classified as rotten or fresh, so in total we have 18 classes.
 ## ML Model Detail
 We train our model using Convolutional Neural Networks and transfer learning InceptionV3. InceptionV3 is chosen based on PoC amongst the other 2 models that use pre-trained model VGG16 and customized model.
